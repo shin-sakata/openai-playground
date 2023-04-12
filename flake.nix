@@ -8,7 +8,9 @@
       pkgs = nixpkgs.legacyPackages.${system};
       nodejs = pkgs.nodejs-slim-18_x;
       pythonEnv = pkgs.python3.withPackages (p: [
-        # p.numpy
+        p.openai
+        p.autopep8
+        p.pydantic
       ]);
     in
     {
