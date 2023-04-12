@@ -1,7 +1,8 @@
 import { OpenAIApi, Configuration } from "openai"
+import { env } from "./env.mjs"
 
 export const openAIApi = new OpenAIApi(
   new Configuration({
-    apiKey: process.env["OPENAI_API_KEY"]!,
+    apiKey: env.OPENAI_API_KEY,
   })
 )
