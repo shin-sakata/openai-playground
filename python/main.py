@@ -7,4 +7,4 @@ result = openai_client.ChatCompletion.create(
     ]
 )
 
-print(result.choices[0].message)
+print(result.choices[0].message)  # type: ignore
